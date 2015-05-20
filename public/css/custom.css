@@ -1,0 +1,170 @@
+.searchContainer {
+	height: 43px;
+	padding: 12px;
+}
+
+.topBar {
+	height: 43px;
+  	border-bottom: 1px solid #1c5380;
+  	border-bottom-color: rgba(4,40,71,.8);
+  	box-shadow: 0 1px 0 rgba(111,151,182,.5)inset,0 -1px 0 rgba(111,151,182,.2)inset,0 1px 1px rgba(0,0,0,.2);
+  	background-color: #517fa4;
+}
+
+.timeline {
+	background: #e0e1e2 url("//instagramstatic-a.akamaihd.net/bluebar/7a0ecb8/images/shared/noise-2.png");
+	border: 1px solid rgba(0,0,0,.1);
+  	border-width: 0 1px;
+  	min-width: 240px;
+  	max-width: 512px;
+  	padding: 16px 32px;
+  	margin-left: 224px;
+  	vertical-align: middle;
+}
+
+.timelineLike {
+	width:49px; 
+	height:40px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.timelineLikeCaption {
+	height:40px;
+	border-right: 1px solid #ddd;
+	text-align: left;
+	padding: 12px 0 0 60px;
+	color: #3f729b;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	vertical-align: middle;
+}
+
+.timelineLikeContainer {
+	background-color: #fafafa;
+	height: 40px;
+	font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+	font-weight: 500;
+  	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  	line-height: 16px;
+  	border: 1px solid #ddd;
+}
+
+.timelineCaptionUsername {
+	color: #3f729b;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	padding: 4px 0px 0px 4px;
+  	font-weight: 700;
+}
+
+.timelineCaptionUsernameContainer {
+	padding-top: 4px; 
+	line-height:22px; 
+	font-weight:100;
+}
+
+.timelineCaptionThumbnail {
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0,.15);
+	margin-left: -35px;
+}
+
+.timelineCaption {
+	border-bottom: 1px solid #e6e6e6;
+  	padding: 12px 12px 11px 48px;
+  	margin-bottom: 0;
+  	word-wrap: break-word;
+  	box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+.timelineCaptionContainer {
+	background-color: white;
+	font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+	font-weight: 500;
+  	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  	line-height: 16px;
+}
+
+.sideBarCreatedTime {
+	color: #999;
+	text-align: right;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	padding-left: 4px;
+}
+
+.sideBarFullName {
+	color: #3f729b;
+	text-align: right;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	padding-left: 4px;
+}
+
+.timelineSideBarContent {
+	font-weight: 700;
+  	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  	line-height: 16px;
+  	margin-right: 24px;
+  	padding-top: 4px;
+  	position: relative;
+}
+
+.timelineSideBar {
+	float: left;
+	width: 224px;
+	padding: 16px 0;
+}
+
+.timelineContainer {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.content {
+	width:100%;
+}
+
+.container {	
+	width: 100%;
+	background: #edeeef url("//instagramstatic-a.akamaihd.net/bluebar/7a0ecb8/images/shared/noise-2.png");
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+.div {
+	display: block;
+}
+
+.btnHome {
+	width: 44px;
+	height: 44px;
+	background-color: rgba(6,54,95,.35);
+	margin: 0 auto;
+}
+
+.love-icon {
+	background: url("//instagramstatic-a.akamaihd.net/bluebar/7a0ecb8/images/feed/feed-assets.png") no-repeat 8px 6px;
+}
+
+.home-icon {
+	background: url("//instagramstatic-a.akamaihd.net/bluebar/7a0ecb8/images/shared/shared-assets.png") no-repeat 6px -194px;
+	width: 44px;
+	height: 44px;
+}
+
+.fl {
+	float:left;
+}
+
+.fr {
+	float:right;
+}

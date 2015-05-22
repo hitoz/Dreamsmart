@@ -2955,5 +2955,65 @@
         "keywords": [
             "instagram"
         ]
+    },
+    {
+        "name": "jenssegers/mongodb",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jenssegers/laravel-mongodb.git",
+            "reference": "13859bb575fc5751f8567a95ab08ad4d0b6e5da8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/13859bb575fc5751f8567a95ab08ad4d0b6e5da8",
+            "reference": "13859bb575fc5751f8567a95ab08ad4d0b6e5da8",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/container": "5.0.*",
+            "illuminate/database": "5.0.*",
+            "illuminate/events": "5.0.*",
+            "illuminate/support": "5.0.*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "*",
+            "orchestra/testbench": "3.0.*",
+            "satooshi/php-coveralls": "*"
+        },
+        "suggest": {
+            "jenssegers/mongodb-sentry": "Add Sentry support to Laravel-MongoDB",
+            "jenssegers/mongodb-session": "Add MongoDB session support to Laravel-MongoDB"
+        },
+        "time": "2015-05-09 20:28:45",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Jenssegers\\Mongodb": "src/",
+                "Jenssegers\\Eloquent": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jens Segers",
+                "homepage": "http://jenssegers.be"
+            }
+        ],
+        "description": "A MongoDB based Eloquent model and Query builder for Laravel 4",
+        "keywords": [
+            "database",
+            "eloquent",
+            "laravel",
+            "model",
+            "mongo",
+            "mongodb"
+        ]
     }
 ]

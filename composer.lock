@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "acdb43ff33fc45d8d92a186eab6ac463",
+    "hash": "bf0299fb190426f24c4236ded81901c9",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1807,6 +1807,64 @@
             "time": "2014-10-13 12:58:55"
         },
         {
+            "name": "jenssegers/mongodb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/laravel-mongodb.git",
+                "reference": "13859bb575fc5751f8567a95ab08ad4d0b6e5da8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/13859bb575fc5751f8567a95ab08ad4d0b6e5da8",
+                "reference": "13859bb575fc5751f8567a95ab08ad4d0b6e5da8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "5.0.*",
+                "illuminate/database": "5.0.*",
+                "illuminate/events": "5.0.*",
+                "illuminate/support": "5.0.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "*",
+                "orchestra/testbench": "3.0.*",
+                "satooshi/php-coveralls": "*"
+            },
+            "suggest": {
+                "jenssegers/mongodb-sentry": "Add Sentry support to Laravel-MongoDB",
+                "jenssegers/mongodb-session": "Add MongoDB session support to Laravel-MongoDB"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Jenssegers\\Mongodb": "src/",
+                    "Jenssegers\\Eloquent": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "http://jenssegers.be"
+                }
+            ],
+            "description": "A MongoDB based Eloquent model and Query builder for Laravel 4",
+            "keywords": [
+                "database",
+                "eloquent",
+                "laravel",
+                "model",
+                "mongo",
+                "mongodb"
+            ],
+            "time": "2015-05-09 20:28:45"
+        },
+        {
             "name": "php-instagram-api/php-instagram-api",
             "version": "dev-master",
             "source": {
@@ -2867,7 +2925,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "php-instagram-api/php-instagram-api": 20
+        "php-instagram-api/php-instagram-api": 20,
+        "jenssegers/mongodb": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

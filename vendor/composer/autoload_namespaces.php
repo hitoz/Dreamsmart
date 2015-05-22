@@ -24,6 +24,8 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'PhpSpec' => array($vendorDir . '/phpspec/phpspec/src'),
+    'Jenssegers\\Mongodb' => array($vendorDir . '/jenssegers/mongodb/src'),
+    'Jenssegers\\Eloquent' => array($vendorDir . '/jenssegers/mongodb/src'),
     'JakubOnderka\\PhpConsoleHighlighter' => array($vendorDir . '/jakub-onderka/php-console-highlighter/src'),
     'JakubOnderka\\PhpConsoleColor' => array($vendorDir . '/jakub-onderka/php-console-color/src'),
     'Instagram' => array($vendorDir . '/php-instagram-api/php-instagram-api'),

@@ -1,6 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use Session;
+use \App\Post as Post;
+use \App\User as User;
+use \App\Tag as Tag;
 
 class WelcomeController extends Controller {
 
@@ -23,7 +26,6 @@ class WelcomeController extends Controller {
 
 	public function __construct()
 	{
-		$this->middleware('guest');
 	}
 
 	/**
@@ -65,13 +67,66 @@ class WelcomeController extends Controller {
 		else {
 			try {
 				$tag = $instagram->getTag($tagFilter);
-				$media = $tag->getMedia(array('count' => 5));
+				$media = $tag->getMedia(array('count' => 3));
 			}
 			catch (\Instagram\Core\ApiException $ex) {
 				return 'Invalid tag';
 			}		
 		}		
 		return view('list')->with('medias', $media)->with('tagFilter', $tagFilter);
+	}
+
+	public function getStoreList() {
+		$tags = Tag::distinct('name')->select('name')->get();
+		return view('store')->with('tags', $tags);
+	}
+
+	public function save() {
+		$id = $_POST['id'];
+		$instagram = new \Instagram\Instagram;
+		$instagram->setAccessToken(Session::get('instagram_access_token'));
+		$media = $instagram->getMedia($id);
+		if ($media != null) {
+			$post = Post::where('media_id', $id)->first();
+			if ($post == null) {
+				
+				$mediaUser = $media->getUser();
+
+				$user = User::where('username', $mediaUser->getUserName())->first();
+				if ($user == null) {
+					$user = new User();
+					$user->username = $mediaUser->getUserName();
+					$user->fullname = $mediaUser->getFullName();
+					$user->profile_picture = $mediaUser->getProfilePicture();
+					$user->save();
+				}
+
+				$post = new Post();
+				$post->media_id = $id;
+				$post->image = $media->getStandardResImage()->url;
+				$post->caption = $media->getCaption()->getText();
+				$post->like_count = $media->getLikesCount();
+				$post->created_time = $media->getCreatedTime();
+				$user->posts()->save($post);
+
+				$tags = $media->getTags();
+				foreach ($tags as $mediaTag) {
+					$tag = new Tag();
+					$tag->name = $mediaTag->getName();
+					$post->tags()->save($tag);
+				}
+				return array("message" => "Saved");
+			}
+			return array("message" => "This post has been save before.");
+		}
+		else {
+			return array("message" => "Media is not found !");
+		}
+	}
+
+	public function test() {
+		$tags = Tag::select('name')->orderBy('name', 'asc')->get();
+		return $tags;
 	}
 
 }

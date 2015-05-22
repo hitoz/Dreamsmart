@@ -11,6 +11,28 @@
   	background-color: #517fa4;
 }
 
+.storePostContainer {
+
+}
+
+.storeCardContainer {
+	background-color: white;
+	width: 370px;
+	margin: 4px;
+	padding: 9px;
+}
+
+.storeTagCaption {
+	height:40px;
+	text-align: left;
+	padding: 10px 0 0 10px;
+	color: #3f729b;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	vertical-align: middle;
+  	font-size: 30;
+}
+
 .timeline {
 	background: #e0e1e2 url("//instagramstatic-a.akamaihd.net/bluebar/7a0ecb8/images/shared/noise-2.png");
 	border: 1px solid rgba(0,0,0,.1);
@@ -27,6 +49,15 @@
 	height:40px;
 	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
+}
+
+.timelineSave {
+	width:49px; 
+	height:40px;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .timelineLikeCaption {
@@ -125,30 +156,47 @@
 	margin: 0 auto;
 }
 
+.storeContainer {
+	width: 1200px;
+	margin: 0 auto;
+	min-height: auto;
+}
+
 .content {
 	width:100%;
 }
 
 .container {	
 	width: 100%;
-	background: #edeeef url("//instagramstatic-a.akamaihd.net/bluebar/7a0ecb8/images/shared/noise-2.png");
 }
 
 body {
 	width: 100%;
 	height: 100%;
 	margin: 0px;
+	background: #edeeef url("//instagramstatic-a.akamaihd.net/bluebar/7a0ecb8/images/shared/noise-2.png");	
 }
 
 .div {
 	display: block;
 }
 
+.btnSave {
+	height:40px; 
+	cursor:pointer;
+}
+
 .btnHome {
 	width: 44px;
 	height: 44px;
 	background-color: rgba(6,54,95,.35);
-	margin: 0 auto;
+}
+
+.btnStore {
+	width: 44px;
+	height: 44px;
+	background-color: rgba(6,54,95,.35);
+	border-left: 1px solid black;
 }
 
 .love-icon {
@@ -161,10 +209,43 @@ body {
 	height: 44px;
 }
 
+.save-icon {
+	background-image: url("https://cdn2.iconfinder.com/data/icons/iconza/iconza_32x32_bfbfbf/save.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 44px;
+	height: 44px;
+}
+
 .fl {
 	float:left;
 }
 
 .fr {
 	float:right;
+}
+
+#page {
+    display: none;
+}
+
+#loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    background-image: url("http://i.imgur.com/9Pn7s71.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }

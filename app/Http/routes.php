@@ -17,20 +17,8 @@ Route::get('/storing', 'WelcomeController@storeAccessToken');
 
 Route::get('/list/{tag?}', 'WelcomeController@getList');
 
-Route::get('/test', function() {
-	$str = "#rollit";
-	$arr = explode("#", $str);
-	foreach ($arr as $value) {
-		if ($value != "") {
-			$tagName = explode(" ", $value)[0];
-			$tag = "#".$tagName;
-			$str = str_replace($tag, "<a href='list/$tagName'>$tag</a>"." ", $str);	
-		}		
-	}
-	return $str;
-});
+Route::get('/store/{tag?}', 'WelcomeController@getStoreList');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::post('/save', 'WelcomeController@save');
+
+Route::get('/test', 'WelcomeController@test');

@@ -37,7 +37,7 @@ class WelcomeController extends Controller {
 		$auth_config = array(
 		    'client_id'         => '1f2482626a8945e6904891bca67d25d1',
 		    'client_secret'     => '32a87295edd7421e94225d066a6a7955',
-		    'redirect_uri'      => 'http://localhost:81/github/dreamsmart/public/storing',
+		    'redirect_uri'      => 'http://localhost:8000/storing',
 		    'scope'             => array( 'likes', 'comments', 'relationships' )
 		);
 		$auth = new \Instagram\Auth($auth_config);
